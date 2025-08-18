@@ -27,11 +27,13 @@ const FactsList = () => {
  
 const App = () => {
 
-  return <div className="container">
-    <LogoImage />
-    <NameHeading />
-    <FactsList />
-  </div>;
+  return (
+    <div className="container">
+      <LogoImage />
+      <NameHeading />
+      <FactsList />
+    </div>
+  );
 };
 
 export default App;
