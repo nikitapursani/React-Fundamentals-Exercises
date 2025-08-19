@@ -19,7 +19,7 @@ const FactsList = () => {
   };
 
   const aboutReact = (facts) =>
-    `Release date: ${facts.releaseDate}. Language: ${facts.releaseDate}. License: ${facts.license}.`;
+    `Release date: ${facts.releaseDate}. Language: ${facts.language}. License: ${facts.license}.`;
 
   return <p>{aboutReact(facts)}</p>
 
