@@ -1,0 +1,45 @@
+.user-list-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.user-list-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list-item {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.7rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(44,62,80,0.05);
+  font-size: 1.1rem;
+}
+
+.user-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.movie-name {
+  font-style: italic;
+  color: #16a085;
+}
