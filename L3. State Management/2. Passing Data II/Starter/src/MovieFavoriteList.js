@@ -1,8 +1,14 @@
-const MovieFavoriteList = ({ profiles, movies }) => {
+import MovieListItem from "./MovieListItem";
+
+const MovieFavoriteList = ({ profiles, movies, users }) => {
   const movieIdLikesMap = {};
   profiles.forEach((profile) => {
     const movieId = profile.favoriteMovieID;
-    movieIdLikesMap[movieId] = (movieIdLikesMap[movieId] || 0) + 1;
+
+    if (!movieIdLikesMap[movieId]) {
+      movieIdLikesMap[movieId] = [];
+    }
+    movieIdLikesMap[movieId].push(profile.userID);
   });
 
   const moviesArray = Object.values(movies);
@@ -11,7 +17,11 @@ const MovieFavoriteList = ({ profiles, movies }) => {
     <ul>
       {moviesArray.map((movie) => (
         <li key={movie.id}>
-          {movie.name} has {movieIdLikesMap[movie.id] || "No"} likes.
+          <MovieListItem
+            movie={movie}
+            likedByUsersList={movieIdLikesMap[movie.id]}
+            users={users}
+          />
         </li>
       ))}
     </ul>

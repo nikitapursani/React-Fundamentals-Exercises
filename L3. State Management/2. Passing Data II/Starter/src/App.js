@@ -102,7 +102,7 @@ const App = () => {
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
       <h2>How Popular is Your Favorite Movie?</h2>
-      <MovieFavoriteList profiles={profiles} movies={movies}/>
+      <MovieFavoriteList profiles={profiles} movies={movies} users={users}/>
     </div>
   );
 };
